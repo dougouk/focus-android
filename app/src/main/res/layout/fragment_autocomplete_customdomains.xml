@@ -2,8 +2,29 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/domainList"
-    android:orientation="vertical"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/domainList"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.button.MaterialButton
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:id="@+id/add_custom_url"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/floating_action_button_size"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/floating_action_button_margin"
+        android:padding="10dp"
+        android:textSize="20sp"
+        app:cornerRadius="56dp"
+        app:icon="@drawable/ic_add"
+        android:gravity="center_vertical"
+        android:text="@string/preference_autocomplete_title_add"
+        android:backgroundTint="@color/colorAccent"
+        />
+</android.support.design.widget.CoordinatorLayout>
